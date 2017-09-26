@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_profile"
+        style="@style/Match_Wrap_style"
+        android:background="@color/white">
+
+    <include
+        android:id="@+id/include_header"
+        layout="@layout/template_header_with_drawer"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_header">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_header">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#01bcbc"
+        android:layout_gravity="center"
+        android:text="- Communication Information -"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registered Email Id"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="2dp"
+        android:padding="2dp"/>
+
+     <!--   <EditText
+            android:id="@+id/ed_username"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="3dp"
+            android:hint="Username"
+            android:maxLength="35"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:textSize="14sp"
+            android:editable="true"
+            android:background="@drawable/simple_edittextcorner"/>-->
+
+    <EditText
+        android:id="@+id/ed_username"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Username"
+        android:textSize="14sp"
+        android:editable="true"
+        android:text=""
+        android:maxLength="35"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="3dp"
+        android:background="@drawable/dropdown_edittext" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mobile Number"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:padding="2dp"/>
+
+    <EditText
+            android:id="@+id/ed_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:hint="Mobile No"
+            android:textSize="14sp"
+            android:text=""
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:editable="true"
+            android:maxLength="10"
+            android:paddingLeft="3dp"
+            android:background="@drawable/dropdown_edittext"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#01bcbc"
+        android:layout_gravity="center"
+        android:text="- Communication Address -"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Building Address"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="2dp"
+        android:padding="2dp"/>
+    <EditText
+    android:id="@+id/ed_bldg_name"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="5dp"
+    android:hint="Address"
+    android:textSize="14sp"
+    android:editable="true"
+    android:maxLength="45"
+    android:paddingLeft="3dp"
+    android:background="@drawable/dropdown_edittext"/>
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Street Name"
+        android:textStyle="bold"
+    android:textSize="16sp"
+    android:padding="2dp"/>
+    <EditText
+        android:id="@+id/ed_area"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:hint="Address"
+        android:textSize="14sp"
+        android:inputType="text"
+        android:singleLine="true"
+        android:maxLength="45"
+        android:imeOptions="actionNext"
+        android:editable="true"
+        android:paddingLeft="3dp"
+        android:background="@drawable/dropdown_edittext"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location/Area"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="2dp"/>
+    <EditText
+        android:id="@+id/ed_location"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:hint="Address"
+        android:textSize="14sp"
+        android:text=""
+        android:maxLength="45"
+        android:inputType="text"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+        android:editable="true"
+        android:paddingLeft="3dp"
+        android:background="@drawable/dropdown_edittext"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pin Code"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="2dp"/>
+    <EditText
+        android:id="@+id/ed_pincode"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:hint="PinCode"
+        android:textSize="14sp"
+        android:text=""
+        android:maxLength="6"
+        android:inputType="number"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:editable="true"
+        android:paddingLeft="3dp"
+        android:background="@drawable/dropdown_edittext"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="State"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:padding="2dp"/>
+    <EditText
+        android:id="@+id/ed_select_state"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Select State"
+        android:textSize="14sp"
+        android:text=""
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="5dp"
+        android:drawableRight="@drawable/drop_arrow"
+        android:background="@drawable/dropdown_edittext" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="City"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:padding="2dp"/>
+    <EditText
+        android:id="@+id/ed_select_city"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Select City"
+        android:textSize="14sp"
+        android:text=""
+        android:singleLine="true"
+        android:paddingRight="5dp"
+        android:drawableRight="@drawable/drop_arrow"
+        android:imeOptions="actionDone"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="3dp"
+        android:background="@drawable/dropdown_edittext" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Country"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:padding="3dp"/>
+    <EditText
+        android:id="@+id/ed_select_country"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Select Country"
+        android:textSize="15sp"
+        android:singleLine="true"
+        android:paddingRight="5dp"
+        android:drawableRight="@drawable/drop_arrow"
+        android:imeOptions="actionDone"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="3dp"
+        android:background="@drawable/dropdown_edittext" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Telephone Number"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="2dp"/>
+    <EditText
+        android:id="@+id/ed_telephone_no"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Contact Number"
+        android:textSize="14sp"
+        android:editable="true"
+        android:text=""
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:maxLength="12"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="3dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/dropdown_edittext" />
+    <LinearLayout
+        android:id="@+id/ll_edit_next_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="2dp">
+        <Button
+            android:id="@+id/btn_edit_info"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Edit"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/loginbtn_corner"/>
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="Next"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/loginbtn_corner"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_save_cancel_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="2dp">
+        <Button
+            android:id="@+id/btn_save_info"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Save"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/loginbtn_corner"/>
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="Cancel"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/loginbtn_corner"/>
+    </LinearLayout>
+    </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/leftfgf_drawer"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@color/bg_color"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" >
+
+        <LinearLayout
+            android:id="@+id/lL_drawer"
+            style="@style/Match_Wrap_style"
+            android:orientation="vertical" >
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                layout="@layout/template_drawer" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            style="@style/wrap_match_style"
+            android:layout_below="@+id/lL_drawer"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white" >
+
+
+            <ListView
+                android:id="@+id/drawerListView"
+                style="@style/Both_Match_style"
+                android:background="@color/white"
+                android:listSelector="@drawable/drawer_list_selector" >
+            </ListView>
+        </FrameLayout>
+    </RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>

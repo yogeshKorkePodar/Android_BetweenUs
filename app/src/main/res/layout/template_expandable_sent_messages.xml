@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/Both_Match_style">
+
+    <RelativeLayout
+        android:id="@+id/rl_date"
+        android:layout_width="match_parent"
+        android:background="@color/light_purple"
+        android:paddingBottom="8dp"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/ed_select_date_sent_msg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:paddingTop="3dp"
+        android:paddingRight="10dp"
+        android:drawableRight="@drawable/drop_arrow"
+        android:paddingBottom="5dp"
+        android:hint="Select Month"
+        android:focusable="false"
+        android:cursorVisible="false"
+        android:textSize="15sp"
+        android:paddingLeft="5dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/white"
+        android:layout_marginRight="15dp"/>
+
+</RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_no_record"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:layout_below="@+id/rl_date"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_messages"
+        android:visibility="gone"
+        android:layout_marginBottom="60dp"
+        android:layout_below="@+id/tv_no_record">
+    </ListView>
+</RelativeLayout>

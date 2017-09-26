@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#232323"
+        android:gravity="center"
+        android:layout_below="@+id/rl_search_students"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="1.2dp"
+            android:layout_height="52dp"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="#010e16"
+            android:layout_toRightOf="@+id/img_teacher"
+            />
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:weightSum="2"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:text=""
+                android:layout_weight="1.7"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/tv_teacher_name"/>
+            <View
+                android:layout_width="1.2dp"
+                android:layout_height="52dp"
+                android:background="#010e16"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/tv_section_value"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_checkbox"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="0.3"
+                android:layout_gravity="center"
+                android:layout_marginLeft="1dp">
+                <CheckBox
+                    android:id="@+id/select_checkbox"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:background="@drawable/blue_selector_checkbox"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginLeft="30dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

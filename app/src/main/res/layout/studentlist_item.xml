@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="3dp"
+        android:layout_marginLeft="3dp">
+        <LinearLayout
+            android:id="@+id/ll_main"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:background="#dbb5ab"
+            android:weightSum="4">
+            <LinearLayout
+                android:id="@+id/ll_roll_no"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:background="@color/sms_listview_even_row">
+                .<TextView
+                    android:id="@+id/tv_roll_no_value"
+                    android:layout_width="28dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:background="@drawable/sms_rollno_bg"
+                    android:text=""/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_student_name"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="2.9"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="1dp"
+                android:background="@color/sms_listview_even_row"
+                android:text=""/>
+           <!-- <TextView
+                android:id="@+id/tv_reg_no"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginLeft="1dp"
+                android:background="@color/sms_listview_even_row"
+                android:text=""/>-->
+           <!-- <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="0.3"
+                android:layout_marginLeft="1dp"
+                android:background="@color/sms_listview_even_row"/>
+-->
+            <LinearLayout
+                android:id="@+id/ll_checkbox"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="0.4"
+                android:layout_marginLeft="1dp"
+                android:background="@color/sms_listview_even_row">
+                <CheckBox
+                    android:id="@+id/select_all_checkbox"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:background="@drawable/selector_checkbox"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

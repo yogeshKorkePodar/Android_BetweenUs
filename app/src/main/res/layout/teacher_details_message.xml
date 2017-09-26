@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2d2c23">
+
+    <include
+        android:id="@+id/include_header"
+        layout="@layout/template_header"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_header">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/template_detail_msg"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="55dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_send_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:visibility="visible"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey">
+        <EditText
+            android:id="@+id/ed_enter_msg"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="4"
+            android:layout_margin="3dp"
+            android:hint="Enter Message"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textCursorDrawable="@drawable/cursor"
+            android:textColor="@color/white"
+            android:background="@drawable/send_msg_edittext"/>
+
+        <ImageView
+            android:id="@+id/img_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/msgsent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            />
+        <ImageView
+            android:id="@+id/img_attach"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginRight="3dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/attachment_black"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

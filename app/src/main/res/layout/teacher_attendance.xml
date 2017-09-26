@@ -1,0 +1,109 @@
+ <android.support.v4.widget.DrawerLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:id="@+id/drawer_layout">
+     <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+    <include android:id="@+id/include_header"
+        layout="@layout/template_header_with_drawer" />
+
+     <ListView
+        android:id="@+id/lv_attendance_selection_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:visibility="gone"
+        android:layout_below="@+id/include_header" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_error_msg"
+        android:visibility="gone"
+        android:layout_below="@+id/lv_attendance_selection_list"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp" />
+     <Button
+         android:id="@+id/btn_addAttendance"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Add Attendance"
+         android:textColor="@color/white"
+         android:paddingLeft="5dp"
+         android:paddingRight="5dp"
+         android:textSize="20sp"
+         android:visibility="gone"
+         android:layout_alignParentRight="true"
+         android:layout_above="@+id/include_footer"
+         android:background="#026579"/>
+     <FrameLayout
+         android:layout_width="80dp"
+         android:layout_height="80dp"
+         android:layout_above="@+id/include_footer">
+
+
+     </FrameLayout>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/teacher_footer"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/include" />
+
+
+     <android.support.design.widget.FloatingActionButton
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="bottom|left"
+         android:visibility="visible"
+         android:clickable="true"
+         android:background="#026579"
+         android:src="@drawable/plus_symbol"
+         android:id="@+id/fab"
+         android:layout_marginLeft="5dp"
+         android:layout_marginRight="5dp"
+         android:layout_above="@+id/include"
+         android:layout_alignParentEnd="true"
+         android:layout_marginEnd="12dp"
+         android:layout_marginBottom="18dp" />
+
+
+
+ </RelativeLayout>
+
+    - <RelativeLayout
+     android:id="@+id/leftfgf_drawer"
+     android:layout_width="350dp"
+     android:layout_height="match_parent"
+     android:layout_gravity="end"
+     android:background="@color/bg_color"
+     android:choiceMode="singleChoice"
+     android:divider="@android:color/transparent"
+     android:dividerHeight="0dp">
+    - <LinearLayout android:id="@+id/lL_drawer"
+     style="@style/Match_Wrap_style"
+     android:orientation="vertical">
+    <include android:layout_width="match_parent"
+        android:layout_height="95dp"
+        layout="@layout/template_teacher_drawer" />
+</LinearLayout>
+    - <FrameLayout
+     style="@style/wrap_match_style"
+     android:layout_below="@+id/lL_drawer"
+     android:layout_centerHorizontal="true"
+     android:background="@color/white">
+    <ListView
+        android:id="@+id/drawerListView"
+        style="@style/Both_Match_style"
+        android:background="@color/white"
+        android:listSelector="@drawable/drawer_list_selector" />
+</FrameLayout>
+
+</RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

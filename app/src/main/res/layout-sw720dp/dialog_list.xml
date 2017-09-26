@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    style="@style/Match_Wrap_style">
+
+    <ListView
+        style="@style/Match_Wrap_style"
+        android:id="@+id/select_list">
+
+    </ListView>
+
+</RelativeLayout>

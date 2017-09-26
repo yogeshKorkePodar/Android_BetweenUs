@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="white" type="color">#FFFFFF</item>
+    <item name="black" type="color">#000000</item>
+    <item name="light_green" type="color">#2c390a</item>
+    <item name="grey" type="color">#D3D3D3</item>
+    <item name="bg_color" type="color">#F8E6DF</item>
+    <item name="red" type="color">#FF0000</item>
+    <item name="purple" type="color">#8c89c9</item>
+    <item name="green" type="color">#9fc438</item>
+    <item name="light_brown" type="color">#f6b936</item>
+    <item name="pink" type="color">#cd4b69</item>
+    <item name="light_purple" type="color">#B27FE6</item>
+    <item name="light_green_parent" type="color">#aacb4e</item>
+    <item name="login_btn" type="color">#00829C</item>
+    <item name="light_pink" type="color">#d35e7a</item>
+    <item name="blue" type="color">#3773aa</item>
+    <item name="orange" type="color">#F79256</item>
+    <item name="attendance" type="color">#026579</item>
+    <item name="attendance2" type="color">#009fff</item>
+    <item name="behaviour" type="color">#21b8c6</item>
+    <color name="horizontal_vertical_lines">#C7C7C7</color>
+    <color name="footer_text_color">#494949</color>
+    <color name="tab_selected">#CE232A</color>
+    <color name="tag_color">#3A3427</color>
+    <color name="button_color">#FF8F00</color>
+    <color name="header_color">#0B4C5F</color>
+    <color name="tab_color">#2d2c23</color>
+    <color name="dark_slate_gray">#2F4F4F</color>
+    <color name="gray_2">#AFAFAF</color>
+    <color name="gray_1">#C0C0C0</color>
+    <color name="disableedittsxt">#efefef</color>
+    <color name="yellow">#dbdb4c</color>
+    <color name="sms_vertical_line">#6c0607</color>
+    <color name="sms_bg">#b50a0d</color>
+    <color name="sms_listview_even_row">#ffe5de</color>
+    <color name="sms_listview_odd_row">#F4CABE</color>
+    <color name="attendance_bg">#344F56</color>
+    <color name="attendance_vertical_line">#141f22</color>
+    <color name="attendance_listview_odd_row">#8bb0b9</color>
+    <color name="attendance_listview_even_row">#e2ebed</color>
+    <color name="behaviour_bg">#353456</color>
+    <color name="behaviour_listview_even_row">#d5d5e5</color>
+    <color name="behaviour_listview_odd_row">#8c8bb9</color>
+    <color name="behaviour_rounded_corner">#3d3b72</color>
+    <color name="teacher_tab_selected">#1473b0</color>
+    <color name="tecaher_tab_unselected">#299be3</color>
+    <color name="message_listview_even_row">#c3e5f7</color>
+    <color name="message_vertical_line">#04314a</color>
+    <color name="message_listview_odd_row">#499dcc</color>
+    <color name="primaryTextColor">#212121</color>
+    <color name="secondaryTextColor">#727272</color>
+    <color name="dividerColor">#D2D2D2</color>
+    <color name="today">#4b82ff</color>
+    <color name="greyed_out">#c7c7c7</color>
+
+    <color name="summer">#44eebd82</color>
+    <color name="fall">#44d8d27e</color>
+    <color name="winter">#44a1c1da</color>
+    <color name="spring">#448da64b</color>
+
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/include_header"
+            android:background="@drawable/simple_editext_dark_bg">
+            <LinearLayout
+                android:id="@+id/ll_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_annou1">
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_margin="2dp"
+                    android:src="@drawable/profilepicture"/>
+                <TextView
+                    android:id="@+id/tv_teacher_announcment_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_announcement_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:paddingBottom="5dp"
+                android:layout_marginLeft="8dp"
+                android:textSize="20sp"
+                android:text=""/>
+         </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

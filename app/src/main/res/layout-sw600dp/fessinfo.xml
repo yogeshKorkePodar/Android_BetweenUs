@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_profile"
+        style="@style/Match_Wrap_style"
+        android:background="@color/white">
+    <include
+        android:id="@+id/include_header"
+        layout="@layout/template_header_with_drawer"/>
+    <LinearLayout
+        style="@style/Match_Wrap_style"
+        android:orientation="vertical"
+        android:layout_below="@+id/include_header">
+        <LinearLayout
+            android:id="@+id/ll_feesInfoOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="8dp"
+            android:layout_gravity="center"
+            android:background="@drawable/pay_fees_online_rounded_btn">
+            <Button
+                android:id="@+id/btn_payFeesOnline"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="Pay Fees Online"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:background="@null"
+                android:textColor="@color/white"
+                android:drawablePadding="5dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/feesonlineiconios"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rl_payment_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#bf9f40"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/payment_history"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:src="@drawable/payment_history_64"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+       <ListView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:visibility="gone"
+           android:id="@+id/lv_payment_history">
+           
+       </ListView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_no_record"
+            android:textSize="18sp"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:gravity="center_horizontal"
+            android:visibility="gone"/>
+        <!--<View
+            android:id="@+id/view_line"
+           android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"/>-->
+        </LinearLayout>
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/leftfgf_drawer"
+        android:layout_width="380dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@color/bg_color"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" >
+
+        <LinearLayout
+            android:id="@+id/lL_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:orientation="vertical" >
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                layout="@layout/template_drawer" />
+        </LinearLayout>
+        <FrameLayout
+            style="@style/wrap_match_style"
+            android:layout_below="@+id/lL_drawer"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white" >
+
+            <ListView
+                android:id="@+id/drawerListView"
+                style="@style/Both_Match_style"
+                android:dividerHeight="0.5dp"
+                android:background="@color/white"
+                android:listSelector="@drawable/drawer_list_selector" >
+            </ListView>
+        </FrameLayout>
+    </RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>

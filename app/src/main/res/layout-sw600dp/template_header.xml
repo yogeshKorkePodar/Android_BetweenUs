@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Match_Wrap_style"
+    android:background="@drawable/gradient">
+
+<RelativeLayout
+    style="@style/Match_Wrap_style"
+    android:id="@+id/rl_header">
+    <LinearLayout
+        android:id="@+id/lay_back_investment"
+        android:layout_width="wrap_content"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/state_selection_header"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_centerVertical="true"
+        >
+        <ImageView
+            android:id="@+id/btn_back_select_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:src="@drawable/back_arrow"
+            android:padding="5dp"/>
+      <!--  <TextView
+            android:id="@+id/btn_header_back"
+            style="@style/Both_Wrap_style"
+            android:text="Back"
+            android:textColor="#ffffff"
+            android:paddingLeft="1dp"
+            android:layout_gravity="center"
+            android:textSize="18sp"/>-->
+    </LinearLayout>
+</RelativeLayout>
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/Both_Wrap_style"
+        android:text=""
+        android:layout_centerInParent="true"
+        android:textColor="#ffffff"
+        android:textSize="18sp"/>
+
+    <ImageView android:id="@+id/img_logo"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>
+
+

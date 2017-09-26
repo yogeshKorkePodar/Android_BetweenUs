@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2d2c23">
+
+    <include
+        android:id="@+id/include_header"
+        layout="@layout/template_header"/>
+    <RelativeLayout
+        style="@style/Match_Wrap_style"
+        android:layout_below="@+id/include_header">
+
+   <!-- <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">-->
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/template_detail_msg"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="55dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"/>
+    <!--</ScrollView>-->
+
+        </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_send_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="6"
+        android:visibility="gone"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey">
+        <EditText
+            android:id="@+id/ed_enter_msg"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="5"
+            android:layout_margin="3dp"
+            android:hint="Enter Message"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textCursorDrawable="@drawable/cursor"
+            android:imeOptions="actionDone"
+            android:textColor="@color/white"
+            android:background="@drawable/send_msg_edittext"/>
+
+        <ImageView
+            android:id="@+id/img_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/msgsent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+</RelativeLayout>

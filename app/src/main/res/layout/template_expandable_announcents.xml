@@ -1,0 +1,76 @@
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_profile"
+        style="@style/Match_Wrap_style"
+        android:background="@color/white">
+    <include
+        android:id="@+id/include_header"
+        layout="@layout/template_header_with_drawer"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_no_record"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone"
+        android:layout_below="@+id/include_header"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_announcement"
+        android:visibility="gone"
+        android:layout_marginBottom="70dp"
+        android:layout_below="@+id/tv_no_record">
+
+    </ListView>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/footer"
+        android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/leftfgf_drawer"
+        style="@style/wrap_match_style"
+        android:layout_gravity="right"
+        android:background="@color/bg_color"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" >
+
+        <LinearLayout
+            android:id="@+id/lL_drawer"
+            style="@style/Match_Wrap_style"
+            android:orientation="vertical" >
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                layout="@layout/template_drawer" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            style="@style/wrap_match_style"
+            android:layout_below="@+id/lL_drawer"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white" >
+
+
+            <ListView
+                android:id="@+id/drawerListView"
+                style="@style/Both_Match_style"
+                android:background="@color/white"
+                android:listSelector="@drawable/drawer_list_selector" >
+            </ListView>
+        </FrameLayout>
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    style="@style/Match_Wrap_style">
+    <include
+        android:id="@+id/include_header"
+        layout="@layout/template_header"  />
+    <ScrollView
+        style="@style/Both_Match_style"
+        android:layout_below="@+id/include_header"
+        >
+        <LinearLayout
+            android:id="@+id/ll_verify_deatils"
+            style="@style/Match_Wrap_style"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Both_Wrap_style"
+                android:id="@+id/tv_old_pass"
+                android:text="Old Password"
+                android:textStyle="bold"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/ed_old_password"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:hint="Enter Old Password"
+                android:textSize="16sp"
+                android:paddingLeft="12dp"
+                android:layout_marginRight="15dp"
+                android:inputType="textPassword"
+                android:background="@drawable/simple_editext_dark_bg"/>
+
+            <TextView
+                style="@style/Both_Wrap_style"
+                android:id="@+id/tv_new_pass"
+                android:text="New Password"
+                android:textStyle="bold"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/ed_new_password"
+                android:layout_marginLeft="25dp"
+                android:textSize="16sp"
+                android:hint="Enter New Password"
+                android:paddingLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:background="@drawable/simple_editext_dark_bg"/>
+            <TextView
+                style="@style/Both_Wrap_style"
+                android:id="@+id/tv_confirm_pass"
+                android:text="Confirm New Password"
+                android:layout_marginLeft="25dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/ed_confirm_password"
+                android:layout_marginLeft="25dp"
+                android:textSize="16sp"
+                android:hint="Enter Confirm Password"
+                android:paddingLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:background="@drawable/simple_editext_dark_bg"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_error_msg"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/red"
+                android:gravity="center_horizontal"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/btn_change_pass_submit"
+                android:text="Submit"
+                android:textSize="20sp"
+                android:background="@drawable/loginbtn_corner"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:paddingTop="5dp"
+                style="@style/Widget.Button"
+                android:paddingBottom="5dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

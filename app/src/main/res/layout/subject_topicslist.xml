@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <include
+        android:id="@+id/include_header"
+        layout="@layout/template_header_with_drawer"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_cycleTest"
+            android:layout_width="match_parent"
+            android:background="#564a12"
+            android:paddingBottom="8dp"
+            android:layout_below="@+id/include_header"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ed_cycle_test"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:paddingTop="5dp"
+                android:focusable="false"
+                android:cursorVisible="false"
+                android:paddingLeft="5dp"
+                android:textSize="16sp"
+                android:hint="Select Cycle Test"
+                android:paddingRight="10dp"
+                android:drawableRight="@drawable/drop_arrow"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:layout_marginRight="5dp"/>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_std_subj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/rl_cycleTest"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_no_record"
+                android:gravity="center_horizontal"
+                android:textSize="16sp"
+                android:layout_below="@+id/tv_std_subj"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"/>
+          <!--  <ListView
+                android:id="@+id/lv_subject_topiclist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_no_record"
+                android:visibility="gone">
+
+            </ListView>-->
+        <ExpandableListView
+        android:id="@+id/lv_subject_topiclist"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:divider="@null"
+        android:groupIndicator="@null"
+        android:visibility="gone"
+        android:layout_below="@+id/tv_no_record"
+        android:dividerHeight="0.5dp">
+
+    </ExpandableListView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:visibility="gone"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/simple_editext_dark_bg"
+            android:layout_below="@+id/rl_cycleTest">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="dhvfd"
+                    android:paddingLeft="15dp"
+                    android:textSize="16sp"
+                    android:textColor="#332500"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_topicname"
+                    android:background="#80cb9302"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tv_topicname"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="#f6dd9b">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#332500"
+                android:text="Total Logs: "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#332500"
+                android:id="@+id/tv_total_logs_value"
+                android:text="4"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logs Filled: "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#332500"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#332500"
+                android:id="@+id/tv_log_filled_value"
+                android:text="4"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:id="@+id/btn_view_log"
+                android:textSize="16sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginLeft="50dp"
+                android:background="#986e01"
+                android:textColor="@color/white"
+                android:text="View Log"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/leftfgf_drawer"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/bg_color"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" >
+
+        <LinearLayout
+            android:id="@+id/lL_drawer"
+            style="@style/Match_Wrap_style"
+            android:orientation="vertical" >
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                layout="@layout/template_teacher_drawer" />
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            style="@style/wrap_match_style"
+            android:layout_below="@+id/lL_drawer"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white" >
+
+
+            <ListView
+                android:id="@+id/drawerListView"
+                style="@style/Both_Match_style"
+                android:background="@color/white"
+                android:listSelector="@drawable/drawer_list_selector" >
+            </ListView>
+        </FrameLayout>
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

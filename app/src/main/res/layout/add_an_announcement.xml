@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical">
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#267d79"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/img_aboutUS"
+        android:layout_width="23dp"
+        android:layout_height="30dp"
+        android:textColor="@color/blue"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/add_plus_button"
+        />
+    <TextView
+        android:id="@+id/tv_announcement_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Announcement"
+        android:textSize="18sp"
+        android:paddingLeft="5dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/img_aboutUS"/>
+
+</RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/blue"
+            />
+        <EditText
+            android:id="@+id/ed_enter_announcement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="2dp"
+            android:gravity="start"
+            android:lines="10"
+            android:background="@drawable/simple_editext_dark_bg"
+        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:weightSum="2"
+            android:background="@color/white">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:textStyle="bold"
+                android:id="@+id/btn_update"
+                android:textColor="@color/white"
+                android:background="#2d2c23"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginLeft="1dp"
+                android:background="#2d2c23"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

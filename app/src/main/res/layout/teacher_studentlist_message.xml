@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/template_header_with_drawer"
+            android:id="@+id/include_header"/>
+        <RelativeLayout
+            android:id="@+id/rl_search_students"
+            android:layout_width="match_parent"
+            android:background="@color/message_listview_odd_row"
+            android:paddingBottom="7dp"
+            android:layout_below="@+id/include_header"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_search_students"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/simple_editext_dark_bg"
+                android:layout_marginLeft="12dp"
+                android:paddingLeft="2dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/ed_search_name"
+                        android:layout_width="220dp"
+                        android:layout_height="35dp"
+                        android:hint="Enter Student Name"
+                        android:paddingLeft="5dp"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:cursorVisible="false"
+                        android:textSize="16sp"/>
+                    <ImageView
+                        android:id="@+id/img_username_close"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/username_close"
+                        android:layout_alignParentRight="true"
+                        android:visibility="invisible"
+                        android:layout_marginRight="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_centerVertical="true"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:background="#04314a"
+                    android:layout_toRightOf="@+id/ed_search_name"
+                    android:src="@drawable/search_new"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_send_sms"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:padding="7dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5dp"
+                android:background="#04314a">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_send_msg"
+                    android:text="Send SMS"
+                    android:textColor="@color/white"
+                    android:src="@drawable/send_sms"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_below="@+id/rl_search_students"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="#04314a"
+                android:weightSum="4">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.7"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="#06476a"
+                    android:text="Roll No"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="2.9"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="1dp"
+                    android:background="#06476a"
+                    android:text="Name"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.4"
+                    android:layout_marginLeft="1dp"
+                    android:background="#06476a">
+                    <CheckBox
+                        android:id="@+id/select_all_checkbox"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:background="@drawable/blue_selector_checkbox"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <!-- <com.podarbetweenus.Utility.LoadMoreListView
+             android:id="@+id/android:list"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/ll_title"
+             android:choiceMode="multipleChoice"
+             android:layout_marginBottom="15dp">
+         </com.podarbetweenus.Utility.LoadMoreListView>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/ll_title">
+
+            <ListView
+                android:id="@+id/lv_message_student_list"
+                android:layout_height="0dip"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_weight="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_no_records_further"
+                android:visibility="gone"
+                android:text=""
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/android:list"
+                android:layout_centerInParent="true"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/leftfgf_drawer"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/bg_color"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" >
+
+        <LinearLayout
+            android:id="@+id/lL_drawer"
+            style="@style/Match_Wrap_style"
+            android:orientation="vertical" >
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                layout="@layout/template_teacher_drawer" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            style="@style/wrap_match_style"
+            android:layout_below="@+id/lL_drawer"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white" >
+
+
+            <ListView
+                android:id="@+id/drawerListView"
+                style="@style/Both_Match_style"
+                android:background="@color/white"
+                android:listSelector="@drawable/drawer_list_selector" >
+            </ListView>
+        </FrameLayout>
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

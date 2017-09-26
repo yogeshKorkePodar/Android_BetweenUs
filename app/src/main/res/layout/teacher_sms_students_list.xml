@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <include
+       layout="@layout/template_header_with_drawer"
+        android:id="@+id/include_header"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_search_students"
+        android:layout_width="match_parent"
+        android:background="@color/sms_vertical_line"
+        android:paddingBottom="7dp"
+        android:layout_below="@+id/include_header"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_search_students"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/simple_editext_dark_bg"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:paddingLeft="2dp"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/ed_search_name"
+                    android:layout_width="220dp"
+                    android:layout_height="35dp"
+                    android:hint="Enter Student Name"
+                    android:paddingLeft="5dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
+                    android:cursorVisible="false"
+                    android:textSize="16sp"/>
+                <ImageView
+                    android:id="@+id/img_username_close"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/username_close"
+                    android:layout_alignParentRight="true"
+                    android:visibility="invisible"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_centerVertical="true"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="#2b0202"
+                android:layout_toRightOf="@+id/ed_search_name"
+                android:src="@drawable/search_new"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_send_sms"
+            android:layout_width="48dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:background="#2b0202">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_send_sms"
+                android:text="Send SMS"
+                android:textColor="@color/white"
+                android:src="@drawable/send_sms"/>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_below="@+id/rl_search_students"
+        android:layout_marginRight="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@color/sms_vertical_line"
+        android:weightSum="4">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/sms_bg"
+            android:text="Roll No"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2.9"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginLeft="1dp"
+            android:background="@color/sms_bg"
+            android:text="Name"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.4"
+            android:layout_marginLeft="1dp"
+            android:background="@color/sms_bg">
+            <CheckBox
+                android:id="@+id/select_all_checkbox"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:button="@null"
+                android:background="@drawable/selector_checkbox"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+   <!-- <com.podarbetweenus.Utility.LoadMoreListView
+        android:id="@+id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_title"
+        android:choiceMode="multipleChoice"
+        android:layout_marginBottom="15dp">
+    </com.podarbetweenus.Utility.LoadMoreListView>-->
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lv_sms_srudent_list"
+            android:layout_below="@+id/ll_title"
+            android:visibility="gone"
+            android:layout_marginBottom="15dp"></ListView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_no_records_further"
+        android:visibility="gone"
+        android:text=""
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/ll_title"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"/>
+        </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/leftfgf_drawer"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/bg_color"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" >
+
+        <LinearLayout
+            android:id="@+id/lL_drawer"
+            style="@style/Match_Wrap_style"
+            android:orientation="vertical" >
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                layout="@layout/template_teacher_drawer" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            style="@style/wrap_match_style"
+            android:layout_below="@+id/lL_drawer"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white" >
+
+
+            <ListView
+                android:id="@+id/drawerListView"
+                style="@style/Both_Match_style"
+                android:background="@color/white"
+                android:listSelector="@drawable/drawer_list_selector" >
+            </ListView>
+        </FrameLayout>
+    </RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>

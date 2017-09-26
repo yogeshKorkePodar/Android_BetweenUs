@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/template_header"
+        android:id="@+id/include_header"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_header">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textColor="#01bcbc"
+                    android:text="Mother Information"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_editMotherInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp">
+                    <Button
+                        android:id="@+id/btn_editmother_info"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:text="Edit"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/loginbtn_corner"/>
+                    <Button
+                        android:id="@+id/btn_next_mother_info"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:text="Next"
+                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@drawable/loginbtn_corner"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_saveMotherInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp">
+                    <Button
+                        android:id="@+id/btn_savemother_info"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:text="Save"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/loginbtn_corner"/>
+                    <Button
+                        android:id="@+id/btn_cancel_mother_info"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:text="Cancel"
+                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@drawable/loginbtn_corner"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_motherrlastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Last Name"
+                    android:textSize="18sp"
+                    android:editable="false"
+                    android:text=""
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="First Name"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_motherfirstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="First Name"
+                    android:editable="false"
+                    android:textSize="18sp"
+                    android:text=""
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date Of Birth"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Date Of Birth"
+                    android:editable="true"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:drawableRight="@drawable/drop_arrow"
+                    android:paddingRight="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Qualification"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_qualification"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Select Qualification"
+                    android:textSize="18sp"
+                    android:editable="true"
+                    android:text=""
+                    android:drawableRight="@drawable/drop_arrow"
+                    android:paddingRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Mother Tongue"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"
+                    android:padding="3dp"/>
+
+                <EditText
+                    android:id="@+id/ed_language"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Select Mother Tongue"
+                    android:textSize="18sp"
+                    android:text=""
+                    android:editable="true"
+                    android:drawableRight="@drawable/drop_arrow"
+                    android:paddingRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Religion"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_religion"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Select Religion"
+                    android:textSize="18sp"
+                    android:text=""
+                    android:editable="true"
+                    android:drawableRight="@drawable/drop_arrow"
+                    android:paddingRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Nationality"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"
+                    android:padding="3dp"/>
+
+                <EditText
+                    android:id="@+id/ed_nationality"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Select Nationality"
+                    android:textSize="18sp"
+                    android:editable="true"
+                    android:text=""
+                    android:drawableRight="@drawable/drop_arrow"
+                    android:paddingRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pan No"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_mother_pan_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Pan No"
+                    android:editable="true"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:textSize="18sp"
+                    android:maxLength="10"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Company Name"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_mother_company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Company Name"
+                    android:textSize="18dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
+                    android:editable="true"
+                    android:maxLength="50"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Occupation"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"
+                    android:padding="3dp"/>
+
+                <EditText
+                    android:id="@+id/ed_occupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Select Occupation"
+                    android:textSize="18sp"
+                    android:text=""
+                    android:editable="true"
+                    android:drawableRight="@drawable/drop_arrow"
+                    android:paddingRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/simple_edittextcorner" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

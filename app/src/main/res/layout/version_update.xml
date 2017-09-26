@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/simple_editext_dark_bg"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp">
+
+    <TextView
+        android:id="@+id/tv_versiondesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New version found, click to update! "
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:gravity="center"/>
+    <View
+        android:id="@+id/view_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/tv_versiondesc"
+        android:background="@color/blue"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_horizontal_line"
+        android:orientation="horizontal"
+        android:background="#cfcfcf">
+
+        <TextView
+            android:id="@+id/tv_update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:padding="15dp"
+            android:layout_marginRight="1dp"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="1dp"
+            android:background="@color/white"
+            android:text="Update"/>
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

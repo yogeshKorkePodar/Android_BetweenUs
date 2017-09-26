@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_profile">
+        <include
+            android:id="@+id/include_header"
+            layout="@layout/template_header"/>
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/include_header"/>
+
+        <ExpandableListView
+            android:id="@+id/expandableListView_class_room_videos"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/video_view"
+            android:groupIndicator="@null"
+            android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+            android:divider="#A4C739"
+
+            android:dividerHeight="0.5dp">
+
+        </ExpandableListView>
+     <!--   <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/footer"
+            android:layout_alignParentBottom="true"/>-->
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/template_header"
+        android:id="@+id/include_header"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_header">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textColor="#01bcbc"
+                    android:text="Medical Information"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_edit_medical_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp">
+                    <Button
+                        android:id="@+id/btn_editmedical_info"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:text="Edit"
+                        android:textSize="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@drawable/loginbtn_corner"/>
+                    <Button
+                        android:id="@+id/btn_medicalnext"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:text="Next"
+                        android:visibility="gone"
+                        android:textSize="20dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@drawable/loginbtn_corner"/>
+                </LinearLayout>
+                <LinearLayout
+
+                    android:id="@+id/ll_save_medical_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp">
+                    <Button
+                        android:id="@+id/btn_savemedical_info"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:text="Save"
+                        android:textSize="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@drawable/loginbtn_corner"/>
+                    <Button
+                        android:id="@+id/btn_medicalcancel"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:text="Cancel"
+                        android:textSize="20dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@drawable/loginbtn_corner"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Blood Group"
+                    android:textSize="20sp"
+                    android:layout_marginTop="3dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_select_bloddgroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Select"
+                    android:textSize="18sp"
+                    android:text=""
+                    android:editable="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:drawableRight="@drawable/drop_arrow"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="All Allergies"
+                    android:textSize="20sp"
+                    android:layout_marginTop="3dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_all_allergies"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="All Allergies"
+                    android:textSize="18sp"
+                    android:text=""
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Health Information"
+                    android:textSize="20sp"
+                    android:layout_marginTop="3dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_health_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Health Information"
+                    android:textSize="18sp"
+                    android:text=""
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:editable="true"
+                    android:maxLength="16"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Height (cm)"
+                    android:textSize="20sp"
+                    android:layout_marginTop="3dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint=""
+                    android:textSize="18sp"
+                    android:text="134"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:editable="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Weight (kgs)"
+                    android:textSize="20sp"
+                    android:layout_marginTop="3dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint=""
+                    android:textSize="18sp"
+                    android:text="24"
+                    android:maxLength="4"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:editable="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Regular Medication"
+                    android:textSize="20sp"
+                    android:layout_marginTop="3dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_regular_medication"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Regular Medication"
+                    android:textSize="20sp"
+                    android:text=""
+                    android:imeOptions="actionNext"
+                    android:editable="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Regular Medication with dosage"
+                    android:textSize="20sp"
+                    android:layout_marginTop="3dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_regular_medication_with_dosage"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Regular Medication with dosage "
+                    android:textSize="18sp"
+                    android:text=""
+                    android:imeOptions="actionNext"
+                    android:editable="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Any Impairment"
+                    android:textSize="20sp"
+                    android:layout_marginTop="3dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_any_impairment"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Any Impairment"
+                    android:textSize="18sp"
+                    android:text=""
+                    android:imeOptions="actionNext"
+                    android:editable="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/simple_edittextcorner" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Exemption from Activities"
+                    android:textSize="20sp"
+                    android:layout_marginTop="3dp"
+                    android:padding="3dp"/>
+                <EditText
+                    android:id="@+id/ed_exemption_from_activities"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Exemption from Activities"
+                    android:textSize="18sp"
+                    android:text=""
+                    android:imeOptions="actionDone"
+                    android:editable="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/simple_edittextcorner" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

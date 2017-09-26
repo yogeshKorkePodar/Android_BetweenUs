@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/message_vertical_line"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/message_vertical_line"
+        android:weightSum="10"
+
+        >
+        <TextView
+            android:text="35"
+            android:gravity="center"
+            android:background="#b3d0d6"
+            android:layout_width="0dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_height="match_parent"
+            android:id="@+id/roll_no"
+            android:layout_weight="1" />
+
+        <TextView
+            android:paddingLeft="2dp"
+            android:layout_marginLeft="1dp"
+            android:text="Test Student"
+            android:background="#b3d0d6"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/student_name"
+            android:layout_weight="3.4" />
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="0dp"
+        android:background="#b3d0d6"
+        android:layout_marginLeft="1dp"
+        android:gravity="center"
+        android:layout_weight="1.1"
+        android:layout_height="50dp" >
+        <CheckBox
+            android:buttonTint="@color/black"
+            android:gravity="center"
+            android:layout_marginLeft="1dp"
+            android:background="#b3d0d6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/absent_checkbox" />
+    </LinearLayout>
+
+        <Button
+            android:enabled="false"
+            android:clickable="false"
+            android:layout_marginLeft="1dp"
+            android:background="#b3d0d6"
+            android:layout_height="match_parent"
+            android:id="@+id/absent_reason"
+            android:textSize="18sp"
+            android:layout_width="0dp"
+            android:layout_weight="3.5"
+            />
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:background="#b3d0d6"
+        android:layout_marginLeft="1dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_height="50dp" >
+        <CheckBox
+            android:buttonTint="@color/black"
+            android:gravity="center"
+            android:layout_marginLeft="1dp"
+            android:background="#b3d0d6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:enabled="false"
+            android:id="@+id/sms_checkBox" />
+    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

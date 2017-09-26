@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.podarbetweenus"
+    android:versionCode="11"
+    android:versionName="11" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <!--for android badge-->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+
+    <!--for Samsung badge-->
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+
+    <!--for htc badge-->
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+
+    <!--for sony badge-->
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+
+    <!--for apex badge-->
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appiconnew"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+
+        android:name="com.podarbetweenus.Utility.AppController">
+        <activity
+            android:name="com.podarbetweenus.Activities.SplashScreen"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name="com.podarbetweenus.Activities.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.ProfileActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.ForgotPasswordActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.DashboardActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.SentMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.ViewMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.EnterMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.AnnouncementActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.AttendanceActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.BehaviourActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.SettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.ParentInformationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.FatherInformationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.MotherInformationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.EmergencyContactActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.MedicalInformationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.ClassRoomVideosActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.OpenVideosActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.DetailMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.SiblingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.Profile_Sibling"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.StudentResourcesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.FeesInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.TeacherProfileActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.TeacherBehaviourActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.TeacherAnnouncementsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.ViewBehaviourActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.TeacherAttendanceActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.SubjectListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.AttendanceListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.TeacherSMSActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.TeacherSMSStudentsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.podarbetweenus.Activities.TeacherSendSMSActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.BehaviourListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.TeacherSentMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.TeacherMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.TeacherViewMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.TeacherEnterMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.TeacherDetailMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.TeacherStudentListForMessage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.TeacherSendMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.SubjectTopicsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.AdminProfileActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.AdminSMSActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.SchoolSMSActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.StudentSMSActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.TeacherSMSAdminActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.AdminMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.AdminViewMessage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.AdminSentMessage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.AdminWriteMessage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.AdminSendSMSToTeachers"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.AdminStudentSMSActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.AdminSendSMSActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.AdminSendSchoolSMSStudent"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.AdminAnnouncmentActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.AdminStudentListSendMessage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.AdminSendMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.AdminDetailMessage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.ViewAdminReceiverList"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.ViewTeacherReceiverList"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.TeacherViewLogActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.TeacherAddAttendenceActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.CalendarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog"/>
+
+        <service android:name="com.podarbetweenus.Services.Webservice"/>
+        <receiver android:name="com.podarbetweenus.Services.AlarmReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+
+</manifest>

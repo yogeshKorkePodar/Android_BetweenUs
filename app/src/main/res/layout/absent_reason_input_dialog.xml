@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:padding="5dp"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:maxLength="100"
+        android:layout_margin="10dp"
+        android:padding="2dp"
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_border_edittext"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/saveButton"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/roundedbutton"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="3"
+        android:text="Done" />
+
+    <Button
+        android:layout_weight="3"
+        android:id="@+id/clearButton"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#ffffff"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Clear" />
+
+        <Button
+            android:layout_weight="3"
+            android:id="@+id/cancelButton"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="#ffffff"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:background="@drawable/roundedbutton"
+            android:text="Cancel" />
+    </LinearLayout>
+
+</LinearLayout>

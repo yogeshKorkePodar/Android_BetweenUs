@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Both_Match_style">
+
+
+
+    <LinearLayout
+        android:id="@+id/main_row2"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/ll_heading"
+        android:weightSum="2.6"
+        android:background="@color/black">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:padding="4dp"
+            android:text=""
+            android:background="@color/white"
+            android:id="@+id/tv_absent_dateValue"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:text=""
+            android:padding="4dp"
+            android:background="@color/white"
+            android:layout_marginLeft="1dp"
+            android:paddingLeft="3dp"
+            android:id="@+id/tv_absent_reasonValue"/>
+    </LinearLayout>
+
+</RelativeLayout>

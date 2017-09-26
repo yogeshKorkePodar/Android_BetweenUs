@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/include_header"
+       layout="@layout/template_header" />
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:src="@drawable/logo"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/include_header"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sibling_list"
+        android:visibility="gone"
+        android:layout_below="@+id/include_header"
+        >
+
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/rl_network_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerInParent="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/nonetworkconnection1"
+                android:layout_gravity="center"
+                android:id="@+id/img_connection"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please Check Internet Connectivity"
+                android:layout_below="@+id/img_connection"
+                android:textColor="#666666"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:id="@+id/btn_refresh"
+                android:text="Refresh"
+                android:layout_gravity="center"
+                android:background="@color/blue"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                /></LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

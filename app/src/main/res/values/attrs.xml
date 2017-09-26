@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomCheckedTextView">
+        <attr name="pTitleText" format="string" localization="suggested" />
+        <attr name="pTitleTextColor" format="color" />
+        <attr name="pSubTitleText" format="string" localization="suggested" />
+        <attr name="pSubTitleTextColor" format="color" />
+        <attr name="pCheckedState" format="boolean" />
+        <attr name="pDividerColor" format="color" />
+        <attr name="pDividerVisibility" format="boolean" />
+        <attr name="pTitleTextFont" format="string" />
+        <attr name="pSubTitleTextFont" format="string" />
+        <attr name="pSetFixedHeight" format="boolean" />
+        <attr name="dateFormat" format="string"/>
+    </declare-styleable>
+  <!--  <declare-styleable name="CalendarView">
+        <attr name="dateFormat" format="string"/>
+    </declare-styleable>
+-->
+</resources> 

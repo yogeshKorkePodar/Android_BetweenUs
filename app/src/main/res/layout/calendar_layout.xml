@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- date toolbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="30dp"
+        android:background="@color/behaviour_listview_odd_row"
+        android:paddingRight="30dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1.6">
+          <!--  <EditText
+                android:id="@+id/ed_select_month"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:text="Feb"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="10dp"
+                android:drawableRight="@drawable/drop_arrow"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:focusable="false"
+                android:cursorVisible="false"
+                android:background="@drawable/simple_editext_dark_bg"/>
+            <EditText
+                android:id="@+id/ed_select_year"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:drawableRight="@drawable/drop_arrow"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="2017"
+                android:focusable="false"
+                android:cursorVisible="false"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/simple_editext_dark_bg"/>-->
+        </LinearLayout>
+
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:prompt="@string/month_prompt"
+            android:id="@+id/spinner" />
+
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:prompt="@string/year_prompt"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/spinner"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/spinner3" />
+
+    </RelativeLayout>
+
+    <!-- days header -->
+    <LinearLayout
+        android:id="@+id/calendar_header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="SUN"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="MON"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="TUE"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="WED"/>
+        <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:textColor="#222222"
+        android:text="THU"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="FRI"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="SAT"/>
+    </LinearLayout>
+
+    <!-- days view -->
+    <GridView
+        android:id="@+id/calendar_grid"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:numColumns="7"/>
+
+    <RelativeLayout
+        android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <View
+            android:layout_width="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="14dp"
+            android:background="#00ff00"
+            android:id="@+id/view1" />
+
+        <View
+            android:layout_width="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_height="14dp"
+            android:background="#ffa500"
+            android:id="@+id/view3" />
+        <View
+            android:layout_width="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="14dp"
+            android:layout_below="@+id/view1"
+            android:background="#ff4040"
+            android:id="@+id/view2" />
+        <View
+            android:layout_width="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="14dp"
+            android:layout_below="@+id/view3"
+            android:layout_toRightOf="@+id/textView2"
+            android:background="#800080"
+            android:id="@+id/view4"
+            android:layout_toStartOf="@+id/textView3" />
+
+
+        <TextView
+            android:text="Attendance Entered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_marginStart="14dp"
+            android:layout_alignBottom="@+id/view1"
+            android:layout_toEndOf="@+id/view1" />
+
+        <TextView
+            android:text="Not Entered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_alignBottom="@+id/view2"
+            android:layout_alignStart="@+id/textView" />
+
+        <TextView
+            android:text="Sunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/view3"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/textView3"
+            android:layout_alignTop="@+id/view3" />
+
+        <TextView
+            android:text="Holidays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_alignTop="@+id/view4"
+            android:layout_alignStart="@+id/textView3" />
+    </RelativeLayout>
+
+</LinearLayout>

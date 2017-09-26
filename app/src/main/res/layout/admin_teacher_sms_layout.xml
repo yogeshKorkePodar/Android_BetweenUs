@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_search_teachers"
+        android:layout_width="match_parent"
+        android:background="@color/sms_vertical_line"
+        android:paddingBottom="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/include_header"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_search_teachers"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/simple_editext_dark_bg"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:paddingLeft="2dp"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="235dp"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/ed_search_name"
+                    android:layout_width="210dp"
+                    android:layout_height="35dp"
+                    android:hint="Enter Student Name"
+                    android:paddingLeft="5dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:cursorVisible="false"
+                    android:textSize="16sp"/>
+                <ImageView
+                    android:id="@+id/img_username_close"
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/username_close"
+                    android:layout_alignParentRight="true"
+                    android:visibility="invisible"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_centerVertical="true"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:background="#2b0202"
+                android:layout_toRightOf="@+id/ed_search_name"
+                android:src="@drawable/search_new"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_send_sms"
+            android:layout_width="48dp"
+            android:layout_height="35dp"
+            android:padding="6dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:background="#2b0202">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_send_sms"
+                android:textColor="@color/white"
+                android:src="@drawable/send_sms"/>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_below="@+id/rl_search_teachers"
+        android:layout_marginRight="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:background="@color/sms_vertical_line"
+            android:weightSum="4">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@color/sms_bg"
+                android:text="SR NO"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="2.9"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginLeft="1dp"
+                android:background="@color/sms_bg"
+                android:text="NAME"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="0.4"
+                android:layout_marginLeft="1dp"
+                android:background="@color/sms_bg">
+                <CheckBox
+                    android:id="@+id/select_all_checkbox"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:background="@drawable/selector_checkbox"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/lv_admin_teacher_list"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/ll_title"
+        android:layout_height="wrap_content">
+    </ListView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_no_record"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/ll_title"/>
+</RelativeLayout>

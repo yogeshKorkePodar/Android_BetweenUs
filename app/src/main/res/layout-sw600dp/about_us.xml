@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2d2c23"
+            android:paddingTop="5dp"
+            android:paddingBottom="3dp"
+            android:gravity="left">
+
+            <ImageView
+                android:id="@+id/img_aboutUS"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textColor="@color/blue"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/appiconnew"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BetweenUs"
+                android:textSize="22sp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/img_aboutUS"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/blue"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aboutus"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_version_name"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="25dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_version_code"
+            android:padding="5dp"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:layout_gravity="start"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#dfdfdf"/>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:gravity="center"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#dfdfdf"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
