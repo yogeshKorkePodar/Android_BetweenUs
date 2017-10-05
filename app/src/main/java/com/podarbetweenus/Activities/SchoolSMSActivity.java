@@ -143,7 +143,7 @@ public class SchoolSMSActivity extends Activity implements View.OnClickListener,
     String AdminSendSMSToTeachersMethod_name = "AdminSendSMS";
     String AdminSendDirectSMSMethod_name = "AdminSendDirectSMS";
     String UploadFileMethod_name = "UploadSmsCsvFile";
-    String sample_file_url = "http://betweenus.in/Administrator/Files/sms_sample.csv";
+    String sample_file_url = "http://www.betweenus.in/Administrator/Files/sms_sample.csv";
     public static String[] select_academic_yr;
     public static String selectedYr = "";
     String[] select_module;

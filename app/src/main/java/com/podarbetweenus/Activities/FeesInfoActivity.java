@@ -1055,7 +1055,8 @@ public class FeesInfoActivity extends Activity implements View.OnClickListener{
         }
         else if(v==btn_payFeesOnline){
             String params = "Username="+username+"&Password="+password+"&msd_id="+msd_id;
-            String url = "http://betweenus.in/AppAutoLogin.aspx?";
+            String url = "http://www.betweenus.in/AppAutoLogin.aspx?";
+            Log.d("<<Redirection URL", url);
             String final_url = url+params;
             Log.e("Final Url = ",final_url);
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(final_url));
