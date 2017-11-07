@@ -65,6 +65,8 @@ public class TeacherMessageActivity extends TabActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.teacher_message_layout);
+        Log.d("<< Inside","TeacherMessageActivity");
+
         findViews();
         init();
         getIntentData();

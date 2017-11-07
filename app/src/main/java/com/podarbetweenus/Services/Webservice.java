@@ -165,7 +165,6 @@ public class Webservice extends IntentService {
             msd_id =  LoginActivity.get_msdId(this);
         }
 
-        //String url = "http://115.124.127.250:8021/PodarApp.svc/GetViewMessageData";
         String url = "http://www.betweenus.in/PODARAPP/PodarApp.svc/GetViewMessageData";
         String teacherUrl = "http://www.betweenus.in/PODARAPP/PodarApp.svc/GetSentMessageDataTeacher";
         String adminUrl = "http://www.betweenus.in/PODARAPP/PodarApp.svc/ViewAdminMessageDetails";

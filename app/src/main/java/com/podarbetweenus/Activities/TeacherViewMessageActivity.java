@@ -63,6 +63,7 @@ public class TeacherViewMessageActivity extends Activity implements AdapterView.
     super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.teacher_view_message);
+        Log.d("<< Inside","TeacherViewMessageActivity");
     findViews();
     init();
     getIntentData();

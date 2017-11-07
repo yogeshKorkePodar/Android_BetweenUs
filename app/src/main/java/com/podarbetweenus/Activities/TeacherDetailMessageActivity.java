@@ -83,7 +83,7 @@ public class TeacherDetailMessageActivity extends Activity implements View.OnCli
     String detail_msg,sender_name,clt_id,usl_id,msd_id,school_name,teacher_name,version_name,board_name,date,subject,message,academic_year,
             reply_msg,msgSubject,stud_id,toUslId,filename,attachedfilename = "0",filepath = "0",pmuId,org_id,teacher_div,teacher_std,teacher_shift,
             attachement_path,attachment_name,attachment,extension,FilePath,responseStatus,encodedUrl,downloadfilename,newFile;
-    String serverAddress = "betweenus.in/Uploads/Messages";
+    String serverAddress = "www.betweenus.in/Uploads/Messages";
     long length;
     JSONObject jsonResponse;
     String ReplyMessageMethodName = "ReplyToStudentMessage";
@@ -94,6 +94,7 @@ public class TeacherDetailMessageActivity extends Activity implements View.OnCli
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.teacher_details_message);
 
+        Log.d("<< Inside","TeacherDetailMessageActivity");
         findViews();
         getIntentData();
         init();

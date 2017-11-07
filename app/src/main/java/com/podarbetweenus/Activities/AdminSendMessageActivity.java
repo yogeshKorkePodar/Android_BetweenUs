@@ -495,7 +495,6 @@ public class AdminSendMessageActivity extends Activity implements View.OnClickLi
                             Toast.makeText(AdminSendMessageActivity.this, "Upload only Word or PDF Document", Toast.LENGTH_LONG).show();
                         } else {
                             new TheTask().execute("http://www.betweenus.in/PODARAPP/PodarApp.svc/UploadAdminMsgAttachment");
-                          //  new TheTask().execute("http://115.124.127.189:8614/PodarApp.svc/UploadAdminMsgAttachment");
                         }
 
                     }
@@ -539,7 +538,6 @@ public class AdminSendMessageActivity extends Activity implements View.OnClickLi
             httpclient.getParams().setParameter("\"http.socket.timeout\"", new Integer(90000));
             // HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost("http://www.betweenus.in/PODARAPP/PodarApp.svc/UploadAdminMsgAttachment");
-          //  HttpPost httppost = new HttpPost("http://115.124.127.189:8614/PodarApp.svc/UploadAdminMsgAttachment");
             // Add Headers
             httppost.addHeader("Filename", filename);
             httppost.addHeader("usl_id", usl_id);

@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'betweenus'
+            keyPassword 'password'
+            storeFile file('E:/Gayatri\'s Document/Android Backup/Android/Keystore(key)/betweenus.keystore.jks')
+            storePassword 'password'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion '25.0.2'
     dexOptions {
@@ -23,13 +31,12 @@ android {
         }
 
     }
-
     defaultConfig {
         applicationId "com.podarbetweenus"
         minSdkVersion 17
         targetSdkVersion 22
-        versionCode 12
-        versionName "12"
+        versionCode 13
+        versionName "13"
         multiDexEnabled true
 
     }
@@ -46,9 +53,9 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-   // all*.exclude group: 'com.android.support', module: 'support-v4'
+    // all*.exclude group: 'com.android.support', module: 'support-v4'
     compile files('libs/volley.jar')
-  //  compile files('libs/android-support-v4.jar')
+    //  compile files('libs/android-support-v4.jar')
     compile 'com.android.support:support-v4:23.1.1'
     compile files('libs/android-viewbadger.jar')
     compile files('libs/gson-2.2.2.jar')

@@ -57,7 +57,7 @@ public class FeesInfoActivity extends Activity implements View.OnClickListener{
     //Button
     Button btn_payFeesOnline;
     ContentDisplaceDrawerToggle mContentDisplaceToggle;
-    Context context;;
+    Context context;
     //View
     View view_line;
     //ProgressDialog
@@ -965,7 +965,6 @@ public class FeesInfoActivity extends Activity implements View.OnClickListener{
                     }
                 });
 
-
     }
 
     private void setUIData() {
@@ -1047,7 +1046,7 @@ public class FeesInfoActivity extends Activity implements View.OnClickListener{
         }
         else if(v==ll_feesInfoOnline){
             String params = "Username="+username+"&Password="+password+"&msd_id="+msd_id;
-            String url = "http://betweenus.in/AppAutoLogin.aspx?";
+            String url = "http://www.betweenus.in/AppAutoLogin.aspx?";
             String final_url = url+params;
             Log.e("Final Url = ",final_url);
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(final_url));

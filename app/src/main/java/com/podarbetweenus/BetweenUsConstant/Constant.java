@@ -16,13 +16,6 @@ public class Constant {
 
     public static AlertDialog.Builder popupDialog = null;
     public static SharedPreferences resultpreLoginData;
-    // public static final String Common_URL = "http://115.124.127.250:8021/PodarApp.svc/";
-
-    // Test Url is below
-     //public static final String Common_URL = "http://115.124.127.189:8614/PodarApp.svc/";
-
-    //Live url is below
-    //public static final String Common_URL = "http://www.betweenus.in/PODARAPP/PodarApp.svc/";
 
     // Amazon WS
     public static final String Common_URL = "http://www.betweenus.in/PODARAPP/PodarApp.svc/";

@@ -135,7 +135,8 @@ public class AppController extends Application implements ListResultReceiver.Rec
 
 	private static AppController mInstance;
 	LoginActivity loginActivity= new LoginActivity();
-	String url ="http://115.124.127.250:8021/PodarApp.svc/GetViewMessageData";
+	//http://www.betweenus.in/PODARAPP/PodarApp.svc/
+	String url ="http://www.betweenus.in/PODARAPP//PodarApp.svc/GetViewMessageData";
 	String teacherUrl = "http://www.betweenus.in/PODARAPP/PodarApp.svc/GetSentMessageDataTeacher";
 	public static String board_name;
 	@Override
