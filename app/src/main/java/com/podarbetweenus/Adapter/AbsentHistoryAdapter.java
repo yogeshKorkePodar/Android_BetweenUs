@@ -70,7 +70,6 @@ public class AbsentHistoryAdapter extends BaseAdapter {
         String newDate = date_array[0];
         String reason = AttemHistoryList.get(position).atn_Reason;
 
-
         String inputPattern = "MM/dd/yyyy";
         String outputPattern = "dd-MMM-yyyy";
         SimpleDateFormat inputFormat = new SimpleDateFormat(inputPattern);

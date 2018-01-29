@@ -81,6 +81,7 @@ public class TeacherMessageActivity extends TabActivity implements View.OnClickL
               tabHost.setCurrentTab(1);
           }
     }
+
     private void getIntentData() {
         Intent intent = getIntent();
         usl_id = intent.getStringExtra("usl_id");
@@ -98,6 +99,7 @@ public class TeacherMessageActivity extends TabActivity implements View.OnClickL
         sentMesgTab = intent.getStringExtra("sentMsgTab");
         AppController.versionName = version_name;
     }
+
     private void setTabs() {
         addTab("View Messages", TeacherViewMessageActivity.class);
         addTab("Write Message ", TeacherEnterMessageActivity.class);
@@ -660,3 +662,4 @@ public class TeacherMessageActivity extends TabActivity implements View.OnClickL
         }
     }
 }
+

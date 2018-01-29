@@ -933,6 +933,7 @@ public class FeesInfoActivity extends Activity implements View.OnClickListener{
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
+                        Log.d("<< CheckFeeOutStanding",response.toString());
 
                         if (progressDialog.isShowing()) {
                             progressDialog.dismiss();
@@ -940,13 +941,15 @@ public class FeesInfoActivity extends Activity implements View.OnClickListener{
                         try {
                             login_details = (LoginDetails) dft.GetResponseObject(response, LoginDetails.class);
 
-                            if (login_details.Status.equalsIgnoreCase("1")) {
+                            if (login_details.StatusMsg.equalsIgnoreCase("Show")) {
+                                Log.d("<< CheckFeeOutStanding",login_details.Status);
                                 ll_feesInfoOnline.setVisibility(View.VISIBLE);
 
                                 if (progressDialog.isShowing()) {
                                     progressDialog.dismiss();
                                 }
-                            } else if (login_details.Status.equalsIgnoreCase("0")) {
+                            } else if (login_details.StatusMsg.equalsIgnoreCase("Dont Show")) {
+                                Log.d("<< CheckFeeOutStanding",login_details.Status);
                                 ll_feesInfoOnline.setVisibility(View.GONE);
                             }
 

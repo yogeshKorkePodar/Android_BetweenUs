@@ -55,6 +55,7 @@ import java.util.Date;
  */
 public class Profile_Sibling extends Activity implements View.OnClickListener{
 
+    boolean firsttime = true;
     //UI variables
     TextView tv_view_msg, tv_view_msg_value, tv_sent_msg, tv_sent_msg_value,tv_messge_count,
             tv_school_name, tv_branch_name, tv_child_name,tv_version_code,tv_version_name,tv_cancel,
@@ -157,6 +158,7 @@ public class Profile_Sibling extends Activity implements View.OnClickListener{
                 sec_ID = Profile_Sibling.get_sec_ID(this);
                 school_name = Profile_Sibling.get_school_name(this);
                 setLogo();
+
                 if (isStudentresource.equalsIgnoreCase("0")) {
                     ll_studentResource.setVisibility(View.VISIBLE);
                 } else {
@@ -167,7 +169,13 @@ public class Profile_Sibling extends Activity implements View.OnClickListener{
                 tv_std_value.setText(std);
                 tv_roll_no_value.setText(roll_no);
                 tv_child_name.setText(child_name);
-                tv_school_name.setText(school_name);
+               // tv_school_name.setText(school_name);
+                tv_school_name.setText(AppController.school_name);
+
+                SharedPreferences pref = getApplicationContext().getSharedPreferences("school_name", 0); // 0 - for private mode
+                // getting String
+                tv_school_name.setText(pref.getString("school_name", ""));
+
                 //For Drawer
                 setDrawer();
             }
@@ -334,7 +342,7 @@ public class Profile_Sibling extends Activity implements View.OnClickListener{
 }
     public void callViewMessagesWebservice(String clt_id,String usl_id,String msd_ID,String month_id,String check,String pageNo,String pageSize) {
         try {
-            dft.getviewMessages(clt_id, usl_id, msd_ID, month_id, check, pageNo, pageSize, ViewMessageMethodName, Request.Method.POST,
+            dft.getviewMessages(clt_id, usl_id, msd_ID, "0", check, pageNo, pageSize, ViewMessageMethodName, Request.Method.POST,
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
@@ -694,6 +702,9 @@ public class Profile_Sibling extends Activity implements View.OnClickListener{
                 String school[] = school_name.split("-");
                 String sch_name = school[0];
                 tv_school_name.setText(AppController.school_name);
+                SharedPreferences pref = getApplicationContext().getSharedPreferences("school_name", 0); // 0 - for private mode
+                // getting String
+                tv_school_name.setText(pref.getString("school_name", ""));
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -1177,6 +1188,9 @@ public class Profile_Sibling extends Activity implements View.OnClickListener{
     }
 
     private void setLogo() {
+        Log.d("<< SetLogo","Setting Logo");
+        Log.d("<< org_id",org_id);
+        Log.d("<< Brd_ID",Brd_ID);
         try {
             //Org Id==2
             if (org_id.equalsIgnoreCase("2") && Brd_ID.equalsIgnoreCase("1") && Integer.valueOf(sec_ID) != 1) {
@@ -1223,8 +1237,9 @@ public class Profile_Sibling extends Activity implements View.OnClickListener{
                 //Lilavti
                 img_icon.setVisibility(View.VISIBLE);
                 img_icon.setImageDrawable(getResources().getDrawable(R.drawable.lilavati_250x125));
-            } else if (org_id.equalsIgnoreCase("4") && Brd_ID.equalsIgnoreCase("1")) {
+            } else if (org_id.equalsIgnoreCase("4") && Brd_ID.equalsIgnoreCase("11")) {
                 //RN podar
+                Log.d("<< SetLogo","RN podar");
                 img_icon.setVisibility(View.VISIBLE);
                 img_icon.setImageDrawable(getResources().getDrawable(R.drawable.rnpodar_225x100));
             } else if (org_id.equalsIgnoreCase("4") && Brd_ID.equalsIgnoreCase("4")) {

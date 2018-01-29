@@ -356,6 +356,13 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                                     usl_id = login_details.userListDetails.get(i).usl_id;
                                     msd_ID = login_details.userListDetails.get(i).msd_ID;
                                     school_name = login_details.userListDetails.get(i).sch_name;
+
+                                    Log.d("<<Login School Name",school_name);
+                                    SharedPreferences pref = getApplicationContext().getSharedPreferences("school_name", 0); // 0 - for private mode
+                                    SharedPreferences.Editor editor = pref.edit();
+                                    editor.putString("school_name", school_name);
+                                    editor.commit();
+
                                     roll_no = login_details.userListDetails.get(i).rol_id;
                                     board_name = login_details.userListDetails.get(i).Brd_Name;
                                     teacher_name = login_details.userListDetails.get(i).name;

@@ -230,7 +230,7 @@ public class AdminProfileActivity extends Activity implements View.OnClickListen
               //  rl_school_logo.setVisibility(View.VISIBLE);
                 img_icon.setImageDrawable(getResources().getDrawable(R.drawable.lilavati_250x125));
             }
-            else if(org_id.equalsIgnoreCase("4") && board_name.equalsIgnoreCase("CBSE")){
+            else if(org_id.equalsIgnoreCase("4") && board_name.equalsIgnoreCase("CBSE.")){
                 //RN podar
                 img_icon.setVisibility(View.VISIBLE);
            //     rl_school_logo.setVisibility(View.VISIBLE);
@@ -656,6 +656,7 @@ public class AdminProfileActivity extends Activity implements View.OnClickListen
                                             adminMsgstatusSize = adminmsgStatusList.size();
                                         }
                                         AppController.iconCount = adminMsgstatusSize;
+                                        Log.d("<< AdminMsgUnreadCount", String.valueOf(adminMsgstatusSize));
                                     }
                                 }
 

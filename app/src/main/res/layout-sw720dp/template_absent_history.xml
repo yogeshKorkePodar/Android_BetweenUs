@@ -5,7 +5,7 @@
 
     <LinearLayout
         android:id="@+id/main_row2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_below="@+id/ll_heading"
         android:weightSum="2.2"
@@ -21,7 +21,7 @@
             android:id="@+id/tv_absent_dateValue"/>
         <TextView
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1.5"
             android:text=""
             android:padding="4dp"

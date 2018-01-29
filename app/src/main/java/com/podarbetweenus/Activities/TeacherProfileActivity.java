@@ -96,6 +96,13 @@ public class TeacherProfileActivity extends Activity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         Log.d("<<Inside","TeacherProfileActivity");
         super.onCreate(savedInstanceState);
+
+        Calendar now = Calendar.getInstance();
+        Date date = now.getTime();
+        SimpleDateFormat format = new SimpleDateFormat("MM");
+        month = format.format(date);
+
+        Log.d("<<<Month", month);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         if(LoginActivity.get_class_teacher(TeacherProfileActivity.this).equalsIgnoreCase("1")){
         setContentView(R.layout.teacher_profile_layout);
@@ -243,7 +250,7 @@ public class TeacherProfileActivity extends Activity implements View.OnClickList
                 img_icon.setVisibility(View.VISIBLE);
                 img_icon.setImageDrawable(getResources().getDrawable(R.drawable.lilavati_250x125));
             }
-            else if(org_id.equalsIgnoreCase("4") && board_name.equalsIgnoreCase("CBSE")){
+            else if(org_id.equalsIgnoreCase("4") && board_name.equalsIgnoreCase("CBSE.")){
                 //RN podar
                 img_icon.setVisibility(View.VISIBLE);
                 img_icon.setImageDrawable(getResources().getDrawable(R.drawable.rnpodar_225x100));
@@ -933,6 +940,8 @@ public class TeacherProfileActivity extends Activity implements View.OnClickList
                 Date date = now.getTime();
                 SimpleDateFormat format = new SimpleDateFormat("MM");
                 month = format.format(date);
+
+                Log.d("<<<Month", month);
                 if (AppController.OnBackpressed.equalsIgnoreCase("true")) {
                     CallWebserviceToViewMessages(clt_id, usl_id, month, check, pageIndex, pageSize);
                     CallTeacherAnnouncementWebservice(clt_id, usl_id);

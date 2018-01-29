@@ -1110,7 +1110,7 @@ public class ProfileActivity extends Activity implements View.OnClickListener {
                 //Lilavti
                 img_icon.setVisibility(View.VISIBLE);
                 img_icon.setImageDrawable(getResources().getDrawable(R.drawable.lilavati_250x125));
-            } else if (org_id.equalsIgnoreCase("4") && Brd_ID.equalsIgnoreCase("1")) {
+            } else if (org_id.equalsIgnoreCase("4") && Brd_ID.equalsIgnoreCase("11")) {
                 //RN podar
                 img_icon.setVisibility(View.VISIBLE);
                 img_icon.setImageDrawable(getResources().getDrawable(R.drawable.rnpodar_225x100));
@@ -1315,7 +1315,7 @@ public class ProfileActivity extends Activity implements View.OnClickListener {
     }
     public void callViewMessagesWebservice(String clt_id,String usl_id,String msd_ID,String month_id,String check,String pageNo,String pageSize) {
 
-        dft.getviewMessages(clt_id, usl_id, msd_ID, month_id, check,pageNo,pageSize, ViewMessageMethodName, Request.Method.POST,
+        dft.getviewMessages(clt_id, usl_id, msd_ID, "0", check,pageNo,pageSize, ViewMessageMethodName, Request.Method.POST,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {

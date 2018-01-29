@@ -182,6 +182,7 @@
             android:theme="@android:style/Theme.Holo.Light.Dialog"/>
 
         <service android:name="com.podarbetweenus.Services.Webservice"/>
+
         <receiver android:name="com.podarbetweenus.Services.AlarmReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
