@@ -108,7 +108,7 @@ public class AdminDetailMessage extends Activity implements View.OnClickListener
         setUIData();
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         try {
-            //Webservice Call for UpdateMessageStatus
+            //Webservice Call for UpdateMessage
             callWebserviceUpdateMessageStatus(pmuId, usl_id, clt_id);
         }
         catch (Exception e)
