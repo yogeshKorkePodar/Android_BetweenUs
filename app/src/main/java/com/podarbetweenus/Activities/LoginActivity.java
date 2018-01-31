@@ -58,6 +58,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
     //UI Variables
     //EditText
+    //Yogesh
     EditText ed_username, ed_password;
     //Button
     Button btn_login;
