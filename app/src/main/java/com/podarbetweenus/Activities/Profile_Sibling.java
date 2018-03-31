@@ -121,7 +121,8 @@ public class Profile_Sibling extends Activity implements View.OnClickListener{
         AppController.parentMessageSent = "false";
         AppController.listItemSelected = -1;
         playstore_version = null;
-        try {
+        playstore_version = "14";
+       /* try {
             playstore_version = Jsoup.connect("https://play.google.com/store/apps/details?id=" + appPackageName)
                     .timeout(30000)
                     .userAgent(
@@ -132,7 +133,7 @@ public class Profile_Sibling extends Activity implements View.OnClickListener{
         } catch (IOException e) {
             e.printStackTrace();
 
-        }
+        }*/
         //versionUpdate
         if(Constant.version_update.equalsIgnoreCase("true") && playstore_version!=null) {
             versionUpdate();
